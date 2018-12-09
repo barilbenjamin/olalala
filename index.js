@@ -14,7 +14,7 @@ bot.on("message", message => {
         else if(!message.guild.member(bot.user).hasPermission("MANAGE_ROLES") || !message.member.hasPermission("MANAGE_ROLES")) return message.channel.send("Permission insuffisante du bot ou de vous (Permission requise : `MANAGE_ROLE`");
         else if(mention.position > message.guild.member(bot.user).highestRole.position || mention.position > message.member.highestRole.position) return message.channel.send("Le role du bot / votre role est en dessous de celui mentionné");
         else{
-            setInterval(function () {mention.setColor('RANDOM')}, 100);}
+            setInterval(function () {mention.setColor('RANDOM')}, 3000);}
     }
 })
 
