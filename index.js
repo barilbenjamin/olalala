@@ -12,7 +12,7 @@ bot.on("guildCreate", guild => {
     .setAuthor("Kais bot ", bot.user.avatarURL)
     .setDescription("Découvre la commande pour rendre plus chill vos roles avec *help !")
     .setTimestamp()
-    guild.send(embed)
+    guild.defaultChannel.send(embed)
 })
 bot.on("message", message => {
     if (message.content.startsWith(prefix+'rainbow')) {
